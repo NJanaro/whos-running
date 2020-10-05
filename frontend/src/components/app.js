@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Route } from 'react-router-dom';
 import Splash from './splash/splash';
 
 const App = () => (
-  <div>
-    <AuthRoute exact path="/" component={ Splash } />
+  <div className="application">
+    <Route exact path="/" component={ Splash } />
   </div>
 );
 
