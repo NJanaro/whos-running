@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const router = express.Router();
 const path = require('path');
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));
   app.get("/", (req, res) => {
