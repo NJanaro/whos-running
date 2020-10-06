@@ -17,7 +17,6 @@ class Splash extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchElections();
     }
 
@@ -59,7 +58,6 @@ class Splash extends React.Component {
             })
         }
         if(bool){
-            // debugger
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
         } 
         return (
