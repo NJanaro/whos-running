@@ -4,7 +4,8 @@ import Splash from './splash';
 
 const mapStateToProps = state => {
     return {
-        elections: state.elections.elections
+        elections: state.elections.elections,
+        voterInfo: state.elections
     }
 }
 
