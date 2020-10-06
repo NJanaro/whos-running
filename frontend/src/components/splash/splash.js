@@ -1,7 +1,7 @@
 import React from 'react';
 import ElectionIndexItem from '../election/election_index_item';
 import VoterInfo from './voter_info';
-// import '../../stylesheets/components/_splash.scss';
+import '../../stylesheets/components/_splash.scss';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -21,8 +21,10 @@ class Splash extends React.Component {
     }
 
     handleClick(id) {
+        debugger
         this.setState({
-            election_id: id
+            election_id: id,
+            splash_address: true
         })
     }
 
@@ -46,7 +48,7 @@ class Splash extends React.Component {
         let bool = this.props.voterInfo.kind === "civicinfo#voterInfoResponse" ? true : false;
         if(this.props.elections) {
             elections = this.props.elections.map(election => {
-                return <ElectionIndexItem onClick={ () => this.handleClick(election.id) } key={ election.id } election={ election } />
+                return <ElectionIndexItem key={ election.id } election={ election } />
             })
         }
         if(bool){

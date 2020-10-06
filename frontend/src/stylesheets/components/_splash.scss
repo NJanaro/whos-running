@@ -1,6 +1,7 @@
 .splash {
     display: flex;
     margin: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     h1 {
@@ -9,7 +10,7 @@
 }
 
 body {
-    background-color: blue;
+    background-color: #151b25;
 }
 
 .election-item:hover {
