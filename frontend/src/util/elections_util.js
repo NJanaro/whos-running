@@ -17,6 +17,7 @@ export const getVoterInfo = address => {
     })
 }
 
+<<<<<<< HEAD
 export const getRepresentativeInfo = query => {
     // debugger
     return axios({
@@ -30,3 +31,5 @@ export const getRepresentativeInfo = query => {
         }
     })
 }
+=======
+>>>>>>> removing gitignore for key and keys_prod
