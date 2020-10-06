@@ -11,7 +11,6 @@ class Splash extends React.Component {
             election_id: null,
             voterInfo: false
         }
-        debugger
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -41,7 +40,6 @@ class Splash extends React.Component {
     }
 
     render() {
-        debugger
         let elections;
         let info;
         let bool = this.props.voterInfo.kind === "civicinfo#voterInfoResponse" ? true : false;
@@ -51,7 +49,6 @@ class Splash extends React.Component {
             })
         }
         if(bool){
-            // debugger
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
         } 
         return (

@@ -1,7 +1,6 @@
 import React from 'react';
 
 class VoterInfo extends React.Component {
-
     render() {
         return (
             <div className="dashboard">
