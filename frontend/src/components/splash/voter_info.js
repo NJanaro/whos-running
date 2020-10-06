@@ -9,7 +9,8 @@ class VoterInfo extends React.Component {
                 election: { info.election.name }
                 date: { info.election.electionDay}
                 Polling address: {info.state[0].local_jurisdiction.electionAdministrationBody.physicalAddress.line1}
-                city: {info.state[0].local_jursidiction.electionAdministrationBody.physicalAddress.city}
+                city: {info.state[0].local_jurisdiction.electionAdministrationBody.physicalAddress.line1}
+                
             </div>
         )
     }
