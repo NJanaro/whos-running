@@ -47,7 +47,7 @@ class Splash extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const userInputAddy = [this.state.address, 2000];
+        const userInputAddy = [this.state.address, this.state.election_id];
         this.props.fetchVoterInfo(userInputAddy);
     }
 

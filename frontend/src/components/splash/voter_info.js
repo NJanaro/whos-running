@@ -52,7 +52,6 @@ class VoterInfo extends React.Component {
                     <p>{ pA.city ? `City: ${pA.city}` : "" }</p>
                     <p>{ pA.state ? `State: ${pA.state}` : "" }</p>
                     <p>{ pA.zip ? `Zip: ${pA.zip}` : "" }</p>
-                    <p>{ lJ ? `county: ${lJ.name}` : ""}</p>
                 </> : null }
                 { eAB ? 
                     <p>{ eAB ? `county: ${ eAB }` : ""}</p>
