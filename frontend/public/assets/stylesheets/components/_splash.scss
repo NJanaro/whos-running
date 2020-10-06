@@ -1,4 +1,4 @@
-.center-splash {
+.splash {
     display: flex;
     margin: auto;
     justify-content: center;
@@ -6,4 +6,12 @@
     h1 {
         text-align: center;
     }
+}
+
+.election-item:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
 }
