@@ -5,7 +5,7 @@ const electionReducer = (state = {}, action) => {
         case RECEIVE_ELECTIONS:
             return action.elections;
         case RECEIVE_VOTER_INFO:
-            return action.voterInfo;
+            return action.voterInfo
         default:
             return state;
     }
