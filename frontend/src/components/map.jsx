@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import MarkerManager from '../../utils/marker_manager';
 import {withRouter} from 'react-router-dom';
 import GoogleMapReact from 'google-map-react';
-import Key from '../../../config/key';
+import Key from '../config/key';
 
 const MapComponent = ({text})=> (
     <div style={{
