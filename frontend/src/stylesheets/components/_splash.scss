@@ -1,0 +1,21 @@
+.splash {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        text-align: center;
+    }
+}
+
+body {
+    background-color: blue;
+}
+
+.election-item:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

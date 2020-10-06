@@ -17,3 +17,5 @@ export const getVoterInfo = address => {
         }
     })
 }
+
+// curl "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyBtb748nfMJgTST6J-2WoOjLvadaRllRh8&address=110%20Meserole%20Ave.%20Brooklyn%20NY&electionId=2000"
