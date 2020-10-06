@@ -1,5 +1,7 @@
 import React from 'react';
 import ElectionIndexItem from '../election/election_index_item';
+// import '../../stylesheets/components/_splash.scss'
+
 
 class Splash extends React.Component {
     constructor(props) {
@@ -34,7 +36,7 @@ class Splash extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const userInputAddy = [this.state.address, 7000];
+        const userInputAddy = [this.state.address, 2000];
         debugger
         this.props.fetchVoterInfo(userInputAddy)
     }
