@@ -13,6 +13,7 @@ class Splash extends React.Component {
         }
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.resetForm = this.resetForm.bind(this);
     }
 
     componentDidMount() {
@@ -21,10 +22,18 @@ class Splash extends React.Component {
     }
 
     handleClick(id) {
-        debugger
+        // debugger
         this.setState({
             election_id: id,
             splash_address: true
+        })
+    }
+
+    resetForm() {
+        this.setState({
+            address: "",
+            splash_address: false,
+            election_id: null
         })
     }
 
@@ -48,7 +57,7 @@ class Splash extends React.Component {
         let bool = this.props.voterInfo.kind === "civicinfo#voterInfoResponse" ? true : false;
         if(this.props.elections) {
             elections = this.props.elections.map(election => {
-                return <ElectionIndexItem key={ election.id } election={ election } />
+                return <li key={ election.id } onClick={ () => this.handleClick(election.id) }><ElectionIndexItem election={ election } /></li>
             })
         }
         if(bool){
@@ -58,15 +67,16 @@ class Splash extends React.Component {
         return (
             <>
                 <div className={ bool ? "hide" : "splash-container" }>
+                    <h1 className="home" onClick={ () => this.props.history.push("/") }>Who's Running</h1>
                     <div className={ this.state.splash_address ? "hide" : "splash" }>
-                        <h1>Who's Running</h1>
                         <div className="splash-elections">
                             { elections }
                         </div>
-                        <div className={ this.state.splash_address ? "search-box" : "hide" }>
-                            <input type="text" placeholder="Enter your address" onChange={ this.handleInput('address') }></input>
-                            <button type="submit" onClick={ this.handleSubmit }>Get Information</button>
-                        </div>
+                    </div>
+                    <div className={ this.state.splash_address ? "search-box" : "hide" }>
+                        <span className="go-back" onClick={ this.resetForm }>Go Back</span>
+                        <input type="text" placeholder="Enter your address" onChange={ this.handleInput('address') }></input>
+                        <button type="submit" onClick={ this.handleSubmit }>Get Information</button>
                     </div>
                 </div>
                 <div className={ bool ? "vi-container" : "hide" }>

@@ -1,11 +1,34 @@
+h1 {
+    text-align: center;
+}
+
 .splash {
     display: flex;
     margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1 {
-        text-align: center;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.go-back:hover {
+    cursor: pointer;
+}
+
+.splash-elections {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    li {
+        margin: 5px;
     }
 }
 
@@ -19,4 +42,8 @@ body {
 
 .hide {
     display: none;
+}
+
+.home {
+    font-size: 90px;
 }
