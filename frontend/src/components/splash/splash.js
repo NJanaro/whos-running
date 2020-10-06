@@ -10,6 +10,7 @@ class Splash extends React.Component {
             election_id: null
         }
         this.handleInput = this.handleInput.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -33,15 +34,16 @@ class Splash extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const userInputAddy = [this.state.address, this.state.election_id];
-
+        const userInputAddy = [this.state.address, 7000];
+        debugger
+        this.props.fetchVoterInfo(userInputAddy)
     }
 
     render() {
         let elections;
         if(this.props.elections) {
             elections = this.props.elections.map(election => {
-                return <ElectionIndexItem onClick={ this.handleClick(election.id) } key={ election.id } election={ election } />
+                return <ElectionIndexItem onClick={ () => this.handleClick(election.id) } key={ election.id } election={ election } />
             })
         }
         return (
@@ -51,7 +53,7 @@ class Splash extends React.Component {
                     { elections }
                 </div>
                 <div className={ this.state.splash_address ? "search-box" : "hide" }>
-                    <input type="text" placeholder="Enter your address" onChange={ this.handleInput }></input>
+                    <input type="text" placeholder="Enter your address" onChange={ this.handleInput('address') }></input>
                     <button type="submit" onClick={ this.handleSubmit }>Get Information</button>
                 </div>
             </div>
