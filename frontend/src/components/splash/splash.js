@@ -1,7 +1,7 @@
 import React from 'react';
 import ElectionIndexItem from '../election/election_index_item';
 import VoterInfo from './voter_info';
-// import '../../stylesheets/components/_splash.scss';
+import '../../stylesheets/components/_splash.scss';
 
 class Splash extends React.Component {
     constructor(props) {
