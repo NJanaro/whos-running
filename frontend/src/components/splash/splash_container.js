@@ -1,6 +1,5 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { fetchElections } from '../../actions/election_actions';
+import { fetchElections, getVoterInfo } from '../../actions/election_actions';
 import Splash from './splash';
 
 const mapStateToProps = state => {
