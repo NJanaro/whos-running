@@ -5,11 +5,16 @@ class RepresentativesIndex extends React.Component {
 
     render() {
         let officials;
-        officials = this.props.repsInfo.officials.map((official, idx) => {
-            return <li key={ idx }><RepresentativesIndexItem repsInfo={ this.props.repsInfo } official={ official }/></li>
-        });
+        if(this.props.repsInfo.officials) {
+            officials = this.props.repsInfo.offices.map((office, idx) => {
+                return office.officialIndices.map(officialIdx => {
+                    return <span className="representative-item" key={ officialIdx }><RepresentativesIndexItem name={ office.name } repsInfo={ this.props.repsInfo } official={ this.props.repsInfo.officials[officialIdx] }/></span>
+                })
+            });
+        }
+    
         return (
-            <section>
+            <section className="reps-container">
                 { officials }
             </section>
         )

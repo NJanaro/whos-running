@@ -17,6 +17,7 @@ class UserQuerying extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const arr = [ this.state.address, this.state.levels, this.state.roles]
+        debugger
         this.props.getRepInfo(arr);
     }
 
@@ -60,7 +61,7 @@ class UserQuerying extends React.Component {
                         <input type="text" placeholder="Enter your address" onChange={ this.handleChoice('address') }/>
                         <label>Level of Administration
                             <select value={ this.state.levels } onChange={ this.handleChoice('levels') }>
-                                {/* <option value=""></option> */}
+                                <option value=" "></option>
                                 <option value="administrativeArea1">Administrative Area 1</option>
                                 <option value="administrativeArea2">Administrative Area 2</option>
                                 <option value="country">Country</option>
@@ -69,7 +70,7 @@ class UserQuerying extends React.Component {
                         </label>
                         <label>Role of Administration
                             <select value={ this.state.roles } onChange={ this.handleChoice('roles') }>
-                                {/* <option value=""></option> */}
+                                <option value=" "></option>
                                 <option value="deputyHeadOfGovernment">Deputy Head of Government</option>
                                 <option value="headOfGovernment">Head of Government</option>
                                 <option value="headOfState">Head of State</option>
