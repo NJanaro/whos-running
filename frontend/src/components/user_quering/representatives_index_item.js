@@ -10,7 +10,6 @@ class RepresentativesIndexItem extends React.Component {
         return (
             <>
                 <div className="official-info">
-                    {/* <img src={ this.props.official.photoUrl } /> */}
                     <li>{ this.props.official.name }</li>
                     <li>{ this.props.official.party }</li>
                 </div>
@@ -21,9 +20,9 @@ class RepresentativesIndexItem extends React.Component {
                     <li>{ this.props.official.address[0].zip }</li>
                 </div>
                 <div className="contact-info">
-                    <li>{ this.props.official.emails.map(email => email) }</li>
-                    <li>{ this.props.official.phones.map(number => number) }</li>
-                    <a href={`${ this.props.official.urls.map(url => url) }`}>Website</a>
+                    <li>{ this.props.official.emails ? this.props.official.emails.map(email => email) : "" }</li>
+                    <li>{ this.props.official.phones ? this.props.official.phones.map(number => number) : "" }</li>
+                    <a href={`${ this.props.official.urls ? this.props.official.urls.map(url => url) : "#"}`}>Website</a>
                 </div>
             </>
         )

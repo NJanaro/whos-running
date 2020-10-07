@@ -11,7 +11,7 @@ class RepresentativesIndex extends React.Component {
         let officials;
         if(this.props.repsInfo.officials) {
             officials = this.props.repsInfo.officials.map((official, idx) => {
-                return <li className="representative-item" key={ idx }><RepresentativesIndexItem repsInfo={ this.props.repsInfo } official={ official }/></li>
+                return <span className="representative-item" key={ idx }><RepresentativesIndexItem repsInfo={ this.props.repsInfo } official={ official }/></span>
             });
         }
     
