@@ -1,0 +1,26 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.instructions {
+    width: 30%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.representative-item {
+    display: flex;
+    flex-direction: column;
+}

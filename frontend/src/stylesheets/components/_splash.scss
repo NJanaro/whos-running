@@ -1,21 +1,60 @@
+h1 {
+    text-align: center;
+}
+
 .splash {
     display: flex;
     margin: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1 {
-        text-align: center;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.go-back:hover {
+    cursor: pointer;
+}
+
+.splash-elections {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    li {
+        margin: 5px;
     }
 }
 
 body {
-    background-color: blue;
+    background-color: #151b25;
 }
 
 .election-item:hover {
+    background-color:#034687;
+    border: 2px solid black;
+    // color: white;
     cursor: pointer;
+    height: 120px;
+}
+
+
+.election-item {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .hide {
     display: none;
+}
+
+.home {
+    font-size: 90px;
 }
