@@ -1,6 +1,30 @@
 import React from 'react';
 
 class UserQuerying extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            address: "",
+            levels: "",
+            roles: ""
+        }
+        this.handleChoice = this.handleChoice.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const arr = [ this.state.address, this.state.levels, this.state.roles]
+        this.props.getRepInfo(arr);
+    }
+
+    handleChoice(field) {
+        return(e) => {
+            this.setState({
+                [field]: e.currentTarget.value
+            })
+        }
+    }
+
     render() {
         return (
             <section className="main-content">
@@ -29,9 +53,9 @@ class UserQuerying extends React.Component {
                     </div>
                 </div>
                 <form>
-                    <input type="text" placeholder="Enter your address"/>
+                    <input type="text" placeholder="Enter your address" onChange={ this.handleChoice('address') }/>
                     <label>Level of Administration
-                        <select>
+                        <select onChange={ this.handleChoice('levels') }>
                             <option value="administrativeArea1">Administrative Area 1</option>
                             <option value="administrativeArea2">Administrative Area 2</option>
                             <option selected value="country">Country</option>
@@ -39,7 +63,7 @@ class UserQuerying extends React.Component {
                         </select>
                     </label>
                     <label>Role of Administration
-                        <select>
+                        <select onChange={ this.handleChoice('roles') }>
                             <option value="deputyHeadOfGovernment">Deputy Head of Government</option>
                             <option value="headOfGovernment">Head of Government</option>
                             <option selected value="headOfState">Head of State</option>

@@ -17,3 +17,15 @@ export const getVoterInfo = address => {
         }
     })
 }
+
+export const getRepresentativeInfo = query => {
+    return axios({
+        method: 'get',
+        url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+        params: {
+            address: query[0],
+            levels: query[1],
+            roles: query[2]
+        }
+    })
+}
