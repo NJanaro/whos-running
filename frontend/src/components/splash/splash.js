@@ -49,6 +49,7 @@ class Splash extends React.Component {
                 return <ElectionIndexItem onClick={ () => this.handleClick(election.id) } key={ election.id } election={ election } />
             })
         }
+        debugger
         if(bool){
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
         } 
