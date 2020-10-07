@@ -52,7 +52,7 @@ export const getVoterInfo = address => dispatch => {
 
 export const getRepresentativeInfo = query => dispatch => {
     return ElectionsApiUtil.getRepresentativeInfo(query).then(representativeInfo => {
-        dispatch(receiveRepresentativeInfo(representativeInfo))
+        dispatch(receiveRepresentativeInfo(representativeInfo.data))
     }, errors => {
         receiveElectionErrors(errors)
     })
