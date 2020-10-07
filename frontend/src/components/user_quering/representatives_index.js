@@ -6,7 +6,7 @@ class RepresentativesIndex extends React.Component {
     render() {
         let officials;
         if(this.props.repsInfo.officials) {
-            officials = this.props.repsInfo.offices.map((office, idx) => {
+            officials = this.props.repsInfo.offices.map((office) => {
                 return office.officialIndices.map(officialIdx => {
                     return <span className="representative-item" key={ officialIdx }><RepresentativesIndexItem name={ office.name } repsInfo={ this.props.repsInfo } official={ this.props.repsInfo.officials[officialIdx] }/></span>
                 })

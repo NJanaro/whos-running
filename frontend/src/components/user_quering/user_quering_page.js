@@ -17,7 +17,7 @@ class UserQuerying extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const arr = [ this.state.address, this.state.levels, this.state.roles]
-        debugger
+        // debugger
         this.props.getRepInfo(arr);
     }
 
