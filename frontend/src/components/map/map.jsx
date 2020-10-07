@@ -51,7 +51,11 @@ export class MapContainer extends React.Component {
           " " +
           this.props.info.voterinfo.normalizedInput.city
       );
-      this.fetchCoords(this.props.info.voterinfo.pollingLocations[0].address.line1);
+      this.fetchCoords(
+        this.props.info.voterinfo.pollingLocations[0].address.line1 +
+          " " +
+          this.props.info.voterinfo.normalizedInput.city
+      );
       this.fetchCoords(
         this.props.info.voterinfo.normalizedInput.line1 + " " +
         this.props.info.voterinfo.normalizedInput.city 
