@@ -9,7 +9,8 @@ class Splash extends React.Component {
         this.state = {
             address: "",
             splash_address: false,
-            election_id: null
+            election_id: null,
+            voterInfo: false
         }
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,12 +18,10 @@ class Splash extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchElections();
     }
 
     handleClick(id) {
-        // debugger
         this.setState({
             election_id: id,
             splash_address: true
@@ -59,7 +58,6 @@ class Splash extends React.Component {
             })
         }
         if(bool){
-            // debugger
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
         } 
         return (

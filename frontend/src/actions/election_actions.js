@@ -42,7 +42,6 @@ export const fetchElections = () => dispatch => {
 }
 
 export const getVoterInfo = address => dispatch => {
-    // debugger
     return ElectionsApiUtil.getVoterInfo(address).then(voterInfo => {
         dispatch(receiveVoterInfo(voterInfo.data))
     }, errors => {
