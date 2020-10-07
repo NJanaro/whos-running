@@ -22,7 +22,6 @@ class Splash extends React.Component {
     }
 
     handleClick(id) {
-        // debugger
         this.setState({
             election_id: id,
             splash_address: true
@@ -58,7 +57,6 @@ class Splash extends React.Component {
                 return <li key={ election.id } onClick={ () => this.handleClick(election.id) }><ElectionIndexItem election={ election } /></li>
             })
         }
-        debugger
         if(bool){
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
         } 
