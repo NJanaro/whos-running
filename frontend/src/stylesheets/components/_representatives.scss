@@ -1,0 +1,15 @@
+.main-content {
+    display: flex;
+}
+
+.instructions {
+    width: 30%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}

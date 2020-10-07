@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../stylesheets/components/_representatives.scss';
 
 class UserQuerying extends React.Component {
     constructor(props) {
@@ -6,7 +7,8 @@ class UserQuerying extends React.Component {
         this.state = {
             address: "",
             levels: "",
-            roles: ""
+            roles: "",
+            value: ""
         }
         this.handleChoice = this.handleChoice.bind(this);
     }
@@ -55,22 +57,25 @@ class UserQuerying extends React.Component {
                 <form>
                     <input type="text" placeholder="Enter your address" onChange={ this.handleChoice('address') }/>
                     <label>Level of Administration
-                        <select onChange={ this.handleChoice('levels') }>
+                        <select value={ "" } onChange={ this.handleChoice('levels') }>
+                            <option value=""></option>
                             <option value="administrativeArea1">Administrative Area 1</option>
                             <option value="administrativeArea2">Administrative Area 2</option>
-                            <option selected value="country">Country</option>
+                            <option value="country">Country</option>
                             <option value="locality">Locality</option>
                         </select>
                     </label>
                     <label>Role of Administration
-                        <select onChange={ this.handleChoice('roles') }>
+                        <select value={ "" } onChange={ this.handleChoice('roles') }>
+                            <option value=""></option>
                             <option value="deputyHeadOfGovernment">Deputy Head of Government</option>
                             <option value="headOfGovernment">Head of Government</option>
-                            <option selected value="headOfState">Head of State</option>
+                            <option value="headOfState">Head of State</option>
                             <option value="legislatorLowerBody">Legislator Lower Body</option>
                             <option value="legislatorUpperBody">Legislator Upper Body</option>
                         </select>
                     </label>
+                    <button type="submit">Get Information</button>
                 </form>
             </section>
         )
