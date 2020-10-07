@@ -31,9 +31,7 @@ class Splash extends React.Component {
 
     resetForm() {
         this.setState({
-            address: "",
             splash_address: false,
-            election_id: null
         })
     }
 

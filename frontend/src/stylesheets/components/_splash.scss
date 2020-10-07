@@ -37,6 +37,9 @@ body {
 }
 
 .election-item:hover {
+    background-color:#034687;
+    border: 2px solid black;
+    // color: white;
     cursor: pointer;
     height: 120px;
 }
