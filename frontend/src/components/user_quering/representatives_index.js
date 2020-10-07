@@ -9,11 +9,14 @@ class RepresentativesIndex extends React.Component {
 
     render() {
         let officials;
-        officials = this.props.repsInfo.officials.map((official, idx) => {
-            return <li key={ idx }><RepresentativesIndexItem repsInfo={ this.props.repsInfo } official={ official }/></li>
-        });
+        if(this.props.repsInfo.officials) {
+            officials = this.props.repsInfo.officials.map((official, idx) => {
+                return <li className="representative-item" key={ idx }><RepresentativesIndexItem repsInfo={ this.props.repsInfo } official={ official }/></li>
+            });
+        }
+    
         return (
-            <section>
+            <section className="reps-container">
                 { officials }
             </section>
         )

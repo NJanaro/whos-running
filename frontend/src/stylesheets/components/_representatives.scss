@@ -22,5 +22,42 @@ form {
 
 .representative-item {
     display: flex;
+    border: 1px solid black;
+    flex-direction: row;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 50%;
+    height: 10%;
+}
+
+.official-info {
+    display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 33.33%;
+    margin: 0 5px;
+}
+
+.reps-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.address-box {
+    height: 100%;
+    width: 33.33%;
+    margin: 0 5px;
+}
+
+.representativesInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
