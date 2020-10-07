@@ -2,10 +2,6 @@ import React from 'react';
 import RepresentativesIndexItem from './representatives_index_item';
 
 class RepresentativesIndex extends React.Component {
-    // constructor(props) {
-    //     super(props);
-
-    // }
 
     render() {
         let officials;
