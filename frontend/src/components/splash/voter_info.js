@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {MapContainer} from '../map/map';
 class VoterInfo extends React.Component {
     render() {
         let arr;
@@ -43,7 +43,8 @@ class VoterInfo extends React.Component {
                 </li>
             )})
         }
-        return (
+        return ( 
+            <>
             <div className="voterinfo">
                 <p>{ info.election.name ? `Election: ${ info.election.name }` : "" }</p>
                 <p>{ info.election.electionDay ? `Date: ${ info.election.electionDay }` : "" }</p>
@@ -59,6 +60,8 @@ class VoterInfo extends React.Component {
                       : null }
                 <div className="election-officials">{ arr }</div>
             </div>
+            <div className="map-container"><MapContainer info={this.props}/></div>
+            </>
         )
     }
 }
