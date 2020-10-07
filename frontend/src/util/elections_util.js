@@ -50,5 +50,16 @@ export const getRepresentativeInfo = query => {
                 address: query[0] 
             }
         })
+    } else {
+        return axios({
+            method: 'get',
+            url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+            params: { 
+                key: `${Key.googleAPI}`,
+                address: query[0],
+                levels: query[1],
+                roles: query[2] 
+            }
+        })
     }
 }
