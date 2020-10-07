@@ -17,10 +17,6 @@ export const getVoterInfo = address => {
     })
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> committing from merge
 export const getRepresentativeInfo = query => {
     // debugger
     return axios({
@@ -34,8 +30,3 @@ export const getRepresentativeInfo = query => {
         }
     })
 }
-<<<<<<< HEAD
-=======
->>>>>>> removing gitignore for key and keys_prod
-=======
->>>>>>> committing from merge
