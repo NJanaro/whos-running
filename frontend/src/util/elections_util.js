@@ -20,14 +20,46 @@ export const getVoterInfo = address => {
 
 export const getRepresentativeInfo = query => {
     // debugger
-    return axios({
-        method: 'get',
-        url: 'https://www.googleapis.com/civicinfo/v2/representatives',
-        params: {
-            key: `${Key.googleAPI}`,
-            address: query[0],
-            levels: query[1],
-            roles: query[2]
-        }
-    })
+    if(query[1] === " " && query[2] !== " ") {
+        return axios({
+            method: 'get',
+            url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+            params: { 
+                key: `${Key.googleAPI}`,
+                address: query[0],
+                roles: query[2] 
+            }
+        })
+    } else if(query[2] === " " && query[1] !== " ") {
+        return axios({
+            method: 'get',
+            url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+            params: { 
+                key: `${Key.googleAPI}`,
+                address: query[0],
+                levels: query[1] 
+            }
+        })
+    } else if(query[1] === " " && query[2] === " ") {
+        // debugger
+        return axios({
+            method: 'get',
+            url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+            params: { 
+                key: `${Key.googleAPI}`,
+                address: query[0] 
+            }
+        })
+    } else {
+        return axios({
+            method: 'get',
+            url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+            params: { 
+                key: `${Key.googleAPI}`,
+                address: query[0],
+                levels: query[1],
+                roles: query[2] 
+            }
+        })
+    }
 }
