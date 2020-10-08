@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../stylesheets/components/_voter_info.scss';
 
+import {MapContainer} from '../map/map';
 class VoterInfo extends React.Component {
     render() {
         const info = this.props.voterinfo;
@@ -299,6 +300,7 @@ class VoterInfo extends React.Component {
         //    const stateInfo = info.state[0];
 
         return (
+            <>
             <div className="voter-info">
                 <div className="user-address">
                     <h2>Elections and Voting Information for:</h2>
@@ -471,6 +473,8 @@ class VoterInfo extends React.Component {
                         : null}
                 </div>
             </div>
+            <div className="map-container"><MapContainer info={this.props}/></div>
+            </>
         )
     }
 }
