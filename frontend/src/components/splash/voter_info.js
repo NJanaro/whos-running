@@ -11,11 +11,11 @@ class VoterInfo extends React.Component {
             <>
             <div className="voter-info">
                 <div className="user-address">
-                    <h2>Elections and Voting Information for:</h2>
+                    <h2>Showing Elections and Voting Information for:</h2>
                     <p>{info.normalizedInput.line1}, {info.normalizedInput.city}, {info.normalizedInput.state} {info.normalizedInput.zip}</p>
                 </div>
                 <div className="election">
-                    <h2>Election</h2>
+                    <h2>Election:</h2>
                     <p>Name: {info.election.name}</p>
                     <p>Date: {info.election.electionDay}</p>
                 </div>
@@ -23,18 +23,20 @@ class VoterInfo extends React.Component {
                 {/* if polling locations data exists */}
                 { info.pollingLocations ? 
                     <div className="polling-locations">
-                        <h2>Polling Locations</h2>
-                        {info.pollingLocations.map( (location, idx) => {
-                            const address = location.address || "n/a"
-                            return (
-                                <div className="polling-location" key={idx}>
-                                    <h3>{address.locationName}</h3>
-                                    <p>Address: {address.line1} {address.line2} {address.line3}, {address.city}, {address.state} {address.zip}</p>
-                                    <p>Notes: {location.notes || "n/a"}</p>
-                                    <p>Polling Hours: {location.pollingHours || "n/a"}</p>
-                                </div>
-                            )
-                        })}
+                        <h2>Polling Locations:</h2>
+                        <div className="polling-locations-list">
+                            {info.pollingLocations.map( (location, idx) => {
+                                const address = location.address || "n/a"
+                                return (
+                                    <div className="list-element" key={idx}>
+                                        <h3>{address.locationName}</h3>
+                                        <p>Address: {address.line1} {address.line2} {address.line3}, {address.city}, {address.state} {address.zip}</p>
+                                        <p>Notes: {location.notes || "n/a"}</p>
+                                        <p>Polling Hours: {location.pollingHours || "n/a"}</p>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                     : null }
 
@@ -44,14 +46,14 @@ class VoterInfo extends React.Component {
                         <h2>Contests</h2>
                         {info.contests.map( (contest, idx) => {
                             return(
-                                <div className="contest" key={idx}>
+                                <div className="list-element" key={idx}>
                                     <h3>Type: {contest.type}, Office: {contest.office}</h3>
                                     { contest.candidates ? 
                                         <div className="candidates">
                                             <h4>Candidates</h4>
                                             {contest.candidates.map( (candidate, idx) => {
                                                 return(
-                                                    <div className="candidate" key={idx}>
+                                                    <div className="list-element" key={idx}>
                                                         <h5>{candidate.name}</h5>
                                                         <p>Party: {candidate.party || "n/a"}</p>
                                                         <p>Phone: {candidate.phone || "n/a"}</p>
@@ -112,7 +114,7 @@ class VoterInfo extends React.Component {
                                     <h4>State Election Administration Body Officials</h4>
                                     { stateInfo.electionAdministrationBody.electionOfficials.map( (official, idx) => {
                                         return (
-                                            <div className="state-election-administration-body-official" key={idx}>
+                                            <div className="list-element" key={idx}>
                                                 <h5>Name: {official.name || "n/a"}</h5>
                                                 <p>Title: {official.title || "n/a"}</p>
                                                 <p>Office Phone: {official.officePhoneNumber || "n/a"}</p>
@@ -165,7 +167,7 @@ class VoterInfo extends React.Component {
                                             <h4>Local Election Administration Body Officials</h4>
                                             {stateInfo.local_jurisdiction.electionAdministrationBody.electionOfficials.map( (official, idx) => {
                                                 return (
-                                                    <div className="local-election-administration-body-official" key={idx}>
+                                                    <div className="list-element" key={idx}>
                                                         <h5>Name: {official.name || "n/a"}</h5>
                                                         <p>Title: {official.title || "n/a"}</p>
                                                         <p>Office Phone: {official.officePhoneNumber || "n/a"}</p>
