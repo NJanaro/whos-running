@@ -1,13 +1,18 @@
 .navbar {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
     height: 56px;
     box-sizing: border-box;
+    align-items: center;
 }
 
-.home-btn {
+.home-btn, .representatives-btn {
     font-size: 32px;
+    margin: 10px;
 }
 
-.home-btn:hover {
+.home-btn:hover, .representatives-btn:hover {
     cursor: pointer;
 }
 
