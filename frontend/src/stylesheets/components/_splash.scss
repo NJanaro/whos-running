@@ -12,8 +12,28 @@ h1 {
 
 .search-box {
     display: flex;
+    width: 30%;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    input {
+        box-sizing: border-box;
+        width: 60%;
+        height: 20%;
+        font-size: 100%;
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+    button {
+        height: 5%;
+        position: absolute;
+        right: 900px;
+        top: 450px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
 }
 
 .go-back:hover {
@@ -57,4 +77,10 @@ body {
 
 .home {
     font-size: 90px;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
