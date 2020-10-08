@@ -57,7 +57,7 @@ class UserQuerying extends React.Component {
                                     A unicameral legislature is one where there is one house, section or chamber. </p>
                         </div>
                     </div>
-                    <form onSubmit={ this.handleSubmit }>
+                    <form className="query-form" onSubmit={ this.handleSubmit }>
                         <input type="text" placeholder="Enter your address" onChange={ this.handleChoice('address') }/>
                         <label>Level of Administration
                             <select value={ this.state.levels } onChange={ this.handleChoice('levels') }>
