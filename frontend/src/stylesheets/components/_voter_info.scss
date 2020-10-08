@@ -1,0 +1,27 @@
+.voter-info div {
+    background-color: #DBE8E1;
+    width: auto;
+    margin: 10px;    
+    
+}
+
+.voter-info > div {
+    border-color: #E10032;
+    border-radius: 8px;
+    border-width: 3px;
+    border-style: solid;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: fit-content;
+}
+
+.voter-info {
+    display: flex;
+    flex-wrap: wrap;;
+}
+
+.map-container {
+    position: sticky;
+    right: 0%;
+    top: 0%;
+}
