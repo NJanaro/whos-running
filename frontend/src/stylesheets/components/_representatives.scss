@@ -6,10 +6,12 @@
 .inner-content {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .instructions {
     width: 30%;
+    margin-left: 10px;
 }
 
 form {
@@ -117,11 +119,18 @@ form {
 img {
     height: 300px;
     width: 300px;
+    border-radius: 7px;
 }
 
 .top {
     display: flex;
     flex-direction: row;
+    height: 40%;
+}
+
+.bottom {
+    display: flex;
+    height: 60%;
 }
 
 .left {
@@ -135,6 +144,9 @@ img {
 }
 
 .socials {
+    display: flex;
+    align-items: flex-end;
+    width: 40%;
     svg {
         margin: 0 5px;
         color: black;
@@ -146,10 +158,24 @@ img {
 }
 
 .twitter-timeline {
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .right {
+    display: flex;
+    flex-direction: row;
     height: 100%;
     width: 65%;
+    .details {
+        width: 60%;
+        h2 {
+            padding: 0px;
+            margin-top: 0px;
+        }
+    }
+}
+
+.wiki {
+    margin-right: 10px;
+    border-radius: 7px;
 }
