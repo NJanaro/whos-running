@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../stylesheets/components/_voter_info.scss';
 
 class VoterInfo extends React.Component {
     render() {

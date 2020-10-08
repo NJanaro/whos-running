@@ -3,10 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../fontawesome';
 
 class OfficialModal extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
     
     componentDidMount() {
         window.twttr.widgets.load();
