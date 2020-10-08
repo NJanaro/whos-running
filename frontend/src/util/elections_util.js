@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Key from '../config/keys_dev.js';
+import Key from '../config/key.js';
 
 export const getElections = () => {
     return axios.get(`https://www.googleapis.com/civicinfo/v2/elections?key=${Key.googleAPI}`)
