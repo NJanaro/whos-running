@@ -1,0 +1,86 @@
+h1 {
+    text-align: center;
+}
+
+.splash {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    input {
+        box-sizing: border-box;
+        width: 60%;
+        height: 20%;
+        font-size: 100%;
+        padding-left: 10px;
+        margin: 10px 0;
+    }
+    button {
+        height: 5%;
+        position: absolute;
+        right: 900px;
+        top: 450px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.go-back:hover {
+    cursor: pointer;
+}
+
+.splash-elections {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    li {
+        margin: 5px;
+    }
+}
+
+body {
+    background-color: #B1B1B1;
+}
+
+.election-item:hover {
+    background-color:#034687;
+    border: 2px solid black;
+    // color: white;
+    cursor: pointer;
+    height: 120px;
+}
+
+
+.election-item {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.home {
+    font-size: 90px;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

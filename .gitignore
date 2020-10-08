@@ -1,2 +1,5 @@
 /node_modules
-key.js
+# key.js
+keys_dev.js
+# keys_prod.js
+# config
