@@ -10,7 +10,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <section className="navbar">
-                {/* <li>Home</li> */}
+                <li className="home-btn" onClick={ () => this.props.history.push("/") }>Home</li>
             </section>
         )
     }
