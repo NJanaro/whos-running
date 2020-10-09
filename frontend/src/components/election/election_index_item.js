@@ -9,7 +9,7 @@ class ElectionIndexItem extends React.Component {
     render() {
         return(
             <div className="election-item" >
-                <h2>Name: { this.props.election.name }</h2>
+                <h2>{ this.props.election.name }</h2>
                 <span>Date: { this.props.election.electionDay }</span>
             </div>
         )

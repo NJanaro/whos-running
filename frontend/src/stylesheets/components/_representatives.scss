@@ -1,5 +1,6 @@
 .main-content {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -52,6 +53,7 @@ form {
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding-bottom: 100px;
 }
 
 .address-box {
@@ -78,7 +80,7 @@ form {
     }
     button {
         height: 5%;
-        position: absolute;
+        // position: absolute;
         right: 464px;
         top: 550px;
     }
