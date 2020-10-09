@@ -23,7 +23,7 @@ class OfficialModal extends React.Component {
             <div className="modal-content">
                 <div className="top">
                     <div className="left">
-                        { official.photoUrl ? <img src={ official.photoUrl } alt={""}/> : <h2 className="no-image">NO IMAGE</h2>}
+                        { official.photoUrl ? <img className="official-photo" src={ official.photoUrl } alt={""}/> : <h2 className="no-image">NO IMAGE</h2>}
                     </div>
                     <div className="right">
                         <div className="details">
