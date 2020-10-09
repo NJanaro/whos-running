@@ -1,4 +1,6 @@
 .navbar {
+    display:flex;
+    justify-content: space-between;
     position: sticky;
     color: #DBE8E1;
     background-color: #034687;
@@ -21,5 +23,19 @@
 
 .home-btn:hover, .representatives-btn:hover {
     cursor: pointer;
+}
+
+#nav-vote {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-left {
+    display: flex;
+    margin-left: 3%;
+}
+
+.nav-right {
+    margin-right: 3%;
 }
 
