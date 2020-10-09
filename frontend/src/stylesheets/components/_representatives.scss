@@ -75,12 +75,16 @@ form {
         display: flex;
         justify-content: space-between;
         margin: 10px 0;
+        select:hover {
+            cursor: pointer;
+        }
     }
     button {
-        height: 5%;
-        position: absolute;
-        right: 464px;
-        top: 550px;
+        height: 6%;
+        margin-top: 10px;
+    }
+    button:hover {
+        cursor: pointer;
     }
 }
 
