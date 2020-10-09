@@ -18,7 +18,12 @@ class UserQuerying extends React.Component {
         e.preventDefault();
         const arr = [ this.state.address, this.state.levels, this.state.roles]
         this.props.getRepInfo(arr)
-        .then(() => {document.getElementById("representativesInfo").scrollIntoView()});
+        .then(() => { 
+            const reps = document.getElementById("representativesInfo")
+            if (reps) {
+                reps.scrollIntoView();
+            }
+        })
     }
 
     handleChoice(field) {
