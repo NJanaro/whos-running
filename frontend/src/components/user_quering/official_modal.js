@@ -18,12 +18,12 @@ class OfficialModal extends React.Component {
                 }
             }
         }
-        // debugger
+
         return (
             <div className="modal-content">
                 <div className="top">
                     <div className="left">
-                        { official.photoUrl ? <img src={ official.photoUrl } alt={""}/> : <h2 className="no-image">NO IMAGE</h2>}
+                        { official.photoUrl ? <img className="official-photo" src={ official.photoUrl } alt={""}/> : <h2 className="no-image">NO IMAGE</h2>}
                     </div>
                     <div className="right">
                         <div className="details">
@@ -56,7 +56,7 @@ class OfficialModal extends React.Component {
                 </div>
                 <div className="bottom">
                     <a className="twitter-timeline" data-width="33%" data-height="95%" href={`https://twitter.com/${tid}?ref_src=twsrc%5Etfw`}>
-                    </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </a> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                     <iframe title={`${ this.props.official.name }`} className="wiki" width="65%" height="95%"src={`https://en.wikipedia.org/w/index.php?title=${ this.props.official.name }`}></iframe> 
                 </div>
             </div>
