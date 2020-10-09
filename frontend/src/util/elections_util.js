@@ -18,7 +18,6 @@ export const getVoterInfo = address => {
 }
 
 export const getRepresentativeInfo = query => {
-    // debugger
     if(query[1] === " " && query[2] !== " ") {
         return axios({
             method: 'get',
@@ -40,7 +39,6 @@ export const getRepresentativeInfo = query => {
             }
         })
     } else if(query[1] === " " && query[2] === " ") {
-        // debugger
         return axios({
             method: 'get',
             url: 'https://www.googleapis.com/civicinfo/v2/representatives',
