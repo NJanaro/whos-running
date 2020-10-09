@@ -6,12 +6,19 @@ class UserQuerying extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            address: "",
-            levels: "administrativeArea1",
-            roles: "deputyHeadOfGovernment"
+            address: this.props.repsInfo.normalizedInput ? `${this.props.repsInfo.normalizedInput.line1} ${this.props.repsInfo.normalizedInput.city} ${this.props.repsInfo.normalizedInput.state} ${this.props.repsInfo.normalizedInput.zip}` : "",
+            levels: " ",
+            roles: " "
         }
         this.handleChoice = this.handleChoice.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        // this.address = null;
+        // if (this.props.repsInfo.normalizedInput) {
+        //   this.address = `${this.props.repsInfo.normalizedInput.line1} ${this.props.repsInfo.normalizedInput.city} ${this.props.repsInfo.normalizedInput.state} ${this.props.repsInfo.normalizedInput.zip}`;
+        // }
+        // console.log(this.address)
+        // if (this.address) this.setState({address:this.address})
     }
 
     handleSubmit(e) {
@@ -34,7 +41,17 @@ class UserQuerying extends React.Component {
         }
     }
 
+    giveAddress(address){
+        this.setState({address})
+    }
+
     render() {
+        // let address;
+        // if (this.props.repsInfo.normalizedInput){ 
+        //     address = `${this.props.repsInfo.normalizedInput.line1} ${this.props.repsInfo.normalizedInput.city} ${this.props.repsInfo.normalizedInput.state} ${this.props.repsInfo.normalizedInput.zip}`;
+        // }
+        
+
         return (
             <div className="main-content">
                 <section className="inner-content">
@@ -63,10 +80,16 @@ class UserQuerying extends React.Component {
                         </div>
                     </div>
                     <form className="query-form" onSubmit={ this.handleSubmit }>
-                        <input type="text" placeholder="Enter your address" onChange={ this.handleChoice('address') }/>
+                        <input
+                            // value={ this.address ? this.giveAddress(this.address) : ""}
+                            value={this.state.address}
+                            type="text"
+                            placeholder="Enter your address" 
+                            onChange={ this.handleChoice('address') }
+                            />
                         <label>Level of Administration
-                            <select value={ this.state.levels } onChange={ this.handleChoice('levels') }>
-                                <option value=" "></option>
+                            <select value={ this.state.levels } onChange={ this.handleChoice('levels')}  >
+                                <option value=" " selected >All Levels</option>
                                 <option value="administrativeArea1">Administrative Area 1</option>
                                 <option value="administrativeArea2">Administrative Area 2</option>
                                 <option value="country">Country</option>
@@ -75,7 +98,7 @@ class UserQuerying extends React.Component {
                         </label>
                         <label>Role of Administration
                             <select value={ this.state.roles } onChange={ this.handleChoice('roles') }>
-                                <option value=" "></option>
+                                <option value=" ">All Rolls</option>
                                 <option value="deputyHeadOfGovernment">Deputy Head of Government</option>
                                 <option value="headOfGovernment">Head of Government</option>
                                 <option value="headOfState">Head of State</option>
