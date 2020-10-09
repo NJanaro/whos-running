@@ -17,8 +17,8 @@ class UserQuerying extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const arr = [ this.state.address, this.state.levels, this.state.roles]
-        // debugger
-        this.props.getRepInfo(arr);
+        this.props.getRepInfo(arr)
+        .then(() => {document.getElementById("representativesInfo").scrollIntoView()});
     }
 
     handleChoice(field) {
@@ -81,9 +81,10 @@ class UserQuerying extends React.Component {
                         <button type="submit">Get Information</button>
                     </form>
                 </section>
-                { this.props.repsInfo.kind ? <section className="representativesInfo">
+                { this.props.repsInfo.kind ? <div id="representativesInfo">
+                <p style={{color:"red"}}>CLICK ON REPRESENTATIVE'S NAME FOR MORE INFORMATION</p>
                 <RepresentativesIndex repsInfo={ this.props.repsInfo }/>
-                </section> : null }
+                </div> : null }
             </div>
         )
     }

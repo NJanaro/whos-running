@@ -64,7 +64,6 @@ export class MapContainer extends React.Component {
 
 //   renderMarkers(map, maps) {
 //     for (let i = 0; i < this.state.startEnd.length; i++) {
-//         // debugger
 //         let coords = this.state.startEnd[i];
 //         let myLatLng = new maps.LatLng(coords.lat, coords.lng);
 //         let marker = new maps.Marker({
@@ -72,7 +71,6 @@ export class MapContainer extends React.Component {
 //           map,
 //           title: "Hello World!",
 //         });
-//         // debugger
 //         // return marker;
 //     }
 //   }

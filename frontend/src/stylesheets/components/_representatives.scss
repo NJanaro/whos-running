@@ -23,14 +23,16 @@ form {
 }
 
 .representative-item {
+    margin: 1px;
     display: flex;
     border: 1px solid black;
     flex-direction: row;
     list-style: none;
     box-sizing: border-box;
     padding: 10px;
-    width: 50%;
+    width: 60%;
     height: 10%;
+    background-color: #DBE8E1;
 }
 
 .official-info {
@@ -56,7 +58,7 @@ form {
 
 .address-box {
     height: 100%;
-    width: 46.33%;
+    width: 40%;
     margin: 0 5px;
 }
 
@@ -89,15 +91,16 @@ form {
 }
 
 .contact-info {
-    width: 33.33%;
+    width: 40%;
 }
 
-.representativesInfo {
+#representativesInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding-bottom: 100px;
 }
 
 .modal {
@@ -140,6 +143,7 @@ form {
     border-radius: 7px;
     width: 48%;
     flex-direction: column;
+    color: honeydew;
 }
 
 img {

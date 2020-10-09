@@ -19,7 +19,6 @@ class RepresentativesIndexItem extends React.Component {
     }
 
     render() {
-        // debugger
         // 1660 Topping Ave Bronx NY 10457
         return (
             <>
@@ -43,7 +42,7 @@ class RepresentativesIndexItem extends React.Component {
                         }) : ""
                     }
                 </div>
-                <section className={ this.state.modal ? "modal" : "hide" }>
+                <section onClick={ this.toggleModal } className={ this.state.modal ? "modal" : "hide" }>
                     <OfficialModal official={ this.props.official } modal={ this.state.modal } repsInfo={ this.props.repsInfo } name={ this.props.name }/>
                 </section>
             </>
