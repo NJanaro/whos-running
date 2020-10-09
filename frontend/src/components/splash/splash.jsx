@@ -2,9 +2,6 @@ import React from 'react';
 import ElectionIndexItem from '../election/election_index_item';
 import VoterInfo from './voter_info';
 import '../../stylesheets/components/_splash.scss';
-import autocomplete from 'autocompleter';
-
-
 
 class Splash extends React.Component {
     constructor(props) {
@@ -12,7 +9,7 @@ class Splash extends React.Component {
         this.state = {
             address: "",
             splash_address: false,
-            election_id: null,
+            election_id: 2000,
             voterInfo: false
         }
         this.handleInput = this.handleInput.bind(this);
@@ -56,14 +53,10 @@ class Splash extends React.Component {
         let info;
         let bool = this.props.voterInfo.kind === "civicinfo#voterInfoResponse" ? true : false;
         if(this.props.elections) {
-            // return( 
-            // elections = this.props.elections;
-            {elections = this.props.elections.map(election => {
-                    return <li key={ election.id } onClick={ () => this.handleClick(election.id) }>
-                    <ElectionIndexItem election={ election } />
-                    </li>
+            let elections = this.props.elections[0]
+            .map(election => {
+                return <li key={ election.id } onClick={ () => this.handleClick(election.id) }><ElectionIndexItem election={ election } /></li>
             })
-            }
         }
         if(bool){
             info = <VoterInfo voterinfo={ this.props.voterInfo } />
@@ -74,10 +67,11 @@ class Splash extends React.Component {
                     <h1 className="home" onClick={ () => this.props.history.push("/") }>Who's Running</h1>
                     <div className={ this.state.splash_address ? "hide" : "splash" }>
                         <div className="splash-elections">
-                            { elections } 
+                            { elections }
                         </div>
                     </div>
                     <div className={ this.state.splash_address ? "search-box" : "hide" }>
+                    <div className="search-box">
                         <span className="go-back" onClick={ this.resetForm }>Go Back</span>
                         <input type="text" placeholder="Enter your address" onChange={ this.handleInput('address') }></input>
                         <button type="submit" onClick={ this.handleSubmit }>Get Information</button>

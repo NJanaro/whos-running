@@ -46,20 +46,18 @@ export class MapContainer extends React.Component {
   }
 
   componentDidMount() {
-      console.log(
-        this.props.info.voterinfo.normalizedInput.line1 +
-          " " +
-          this.props.info.voterinfo.normalizedInput.city
-      );
-      this.fetchCoords(
-        this.props.info.voterinfo.pollingLocations[0].address.line1 +
-          " " +
-          this.props.info.voterinfo.normalizedInput.city
-      );
-      this.fetchCoords(
-        this.props.info.voterinfo.normalizedInput.line1 + " " +
-        this.props.info.voterinfo.normalizedInput.city 
-      );
+      if(this.props.info.voterinfo.pollingLocations && this.props.info.voterinfo.normalizedInput.line1) {
+        this.fetchCoords(
+          this.props.info.voterinfo.pollingLocations[0].address.line1 +
+            " " +
+            this.props.info.voterinfo.normalizedInput.city
+        );
+        this.fetchCoords(
+          this.props.info.voterinfo.normalizedInput.line1 + " " +
+          this.props.info.voterinfo.normalizedInput.city 
+        );
+        
+      } 
   }
 
 //   renderMarkers(map, maps) {
