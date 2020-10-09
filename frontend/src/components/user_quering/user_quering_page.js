@@ -87,7 +87,6 @@ class UserQuerying extends React.Component {
                     </form>
                 </section>
                 { this.props.repsInfo.kind ? <div id="representativesInfo">
-                <p style={{color:"red"}}>CLICK ON REPRESENTATIVE'S NAME FOR MORE INFORMATION</p>
                 <RepresentativesIndex repsInfo={ this.props.repsInfo }/>
                 </div> : null }
             </div>
