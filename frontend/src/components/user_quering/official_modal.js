@@ -46,9 +46,9 @@ class OfficialModal extends React.Component {
                         <div className="socials">
                             { this.props.official.channels ? this.props.official.channels.map((social, idx) => {
                                 if(social.type === "Facebook"){
-                                    return <a key={ idx } href={ "Facebook.com/" + social.id }><FontAwesomeIcon icon={["fab", "facebook"]}/></a>
+                                    return <a key={ idx } href={ "https://www.Facebook.com/" + social.id }><FontAwesomeIcon icon={["fab", "facebook"]}/></a>
                                 } else if(social.type === "YouTube"){
-                                    return <a key={ idx } href={ "Youtube.com/" + social.id }><FontAwesomeIcon icon={["fab", "youtube"]}/></a>
+                                    return <a key={ idx } href={ "https://www.Youtube.com/" + social.id }><FontAwesomeIcon icon={["fab", "youtube"]}/></a>
                                 }
                             }) : ""}
                         </div>
