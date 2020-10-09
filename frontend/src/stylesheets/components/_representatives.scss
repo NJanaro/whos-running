@@ -25,25 +25,31 @@ form {
 
 .representative-item {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
     flex-direction: row;
     list-style: none;
     box-sizing: border-box;
-    padding: 10px;
-    width: 50%;
-    height: 10%;
+    padding: 15px;
+    width: 80%;
+    // height: 10%;
+    margin-bottom: -1px;
+    // margin-top: -1px;
 }
 
 .official-info {
     display: flex;
+    align-items: center;
     flex-direction: column;
     height: 100%;
-    width: 20%;
-    margin: 0 5px;
-}
-
-.official-info:hover {
-    cursor: pointer;
+    width: 40%;
+    // margin: 10px 0px 10px 0px;
+    // margin: 9% 0% 9% 0% ;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+    
 }
 
 .reps-container {
@@ -57,10 +63,17 @@ form {
 }
 
 .address-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     height: 100%;
     width: 46.33%;
-    margin: 0 5px;
+    // margin: 9% 0% 9% 0% ;
+    padding-left: 8px;
+    padding-right: 8px;
 }
+
 
 .query-form {
     input {
@@ -91,6 +104,11 @@ form {
 
 .contact-info {
     width: 33.33%;
+    text-align: center;
+        // margin: 9% 0% 9% 0% ;
+    padding-left: 8px;
+    padding-right: 8px;
+
 }
 
 .representativesInfo {
@@ -99,6 +117,7 @@ form {
     justify-content: center;
     align-items: center;
     list-style: none;
+
 }
 
 .modal {
@@ -205,4 +224,29 @@ img {
 .wiki {
     margin-right: 10px;
     border-radius: 7px;
+}
+
+#info-icon {
+    width: 32px;
+    height: 32px;
+}
+
+#info-icon:hover {
+    cursor: pointer;
+}
+
+.info-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 4%;
+}
+
+.D {
+    color: blue;
+}
+
+.R {
+    color: red;
 }
